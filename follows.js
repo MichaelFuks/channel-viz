@@ -17,7 +17,7 @@
 		applicationName	= 'Michael Fuks', // Replaces Xively logo in the header
 		dataDuration	= '1week', // Default duration of data to be displayed // ref: https://xively.com/dev/docs/api/data/read/historical_data/
 		dataInterval	= 900, // Default interval for data to be displayed (in seconds)
-		dataColor		= '0A1922', // CSS HEX value of color to represent data (omit leading #)
+		dataColor		= 'FF0000', // CSS HEX value of color to represent data (omit leading #)
 		hideForm		= 1; // To hide input form use value of 1, otherwise set to 0
 
 // Function Declarations
@@ -148,7 +148,7 @@
 										element: document.querySelector('#graph-' + feedId + '-' + datastream.id),
 										width: 600,
 										height: 400,
-										renderer: 'scatterplot',
+										renderer: 'line',
 										min: parseFloat(datastream.min_value) - .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
 										max: parseFloat(datastream.max_value) + .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
 										padding: {
